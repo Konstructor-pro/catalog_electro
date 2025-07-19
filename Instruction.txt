@@ -1,0 +1,13 @@
+# все команды через консоль
+# Конвертируем CSV (если формат UTF-16LE)
+iconv -f UTF-16LE -t UTF-8 components.csv -o components_utf8.csv
+
+chmod +x generate_components.sh
+./generate_components.sh
+
+chmod +x generate_components.sh
+./create_templates.sh
+
+chmod +x merge_to_csv.sh
+./merge_to_csv.sh
+
