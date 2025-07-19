@@ -1,0 +1,15 @@
+# Автоматически генерируемые файлы
+components_utf8.csv
+components_sorted.csv
+
+# Временные файлы
+*.tmp
+*.bak
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Файлы IDE
+.idea/
+.vscode/
