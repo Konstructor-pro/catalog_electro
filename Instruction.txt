@@ -1,5 +1,5 @@
 # все команды через консоль
-# Конвертируем CSV (если формат UTF-16LE)
+# Конвертируем CSV (если формат UTF-16LE, проверяем кодировку)
 iconv -f UTF-16LE -t UTF-8 components.csv -o components_utf8.csv
 
 chmod +x generate_components.sh
