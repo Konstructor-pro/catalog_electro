@@ -15,4 +15,4 @@ Thumbs.db
 .vscode/
 
 # Директории и файлы в них
-/request_commits
+/request_commitsreport/
