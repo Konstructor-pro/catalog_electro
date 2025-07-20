@@ -13,3 +13,6 @@ Thumbs.db
 # Файлы IDE
 .idea/
 .vscode/
+
+# Директории и файлы в них
+/request_commits

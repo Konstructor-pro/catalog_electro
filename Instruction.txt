@@ -20,10 +20,11 @@ chmod +x commit_list.sh
 
 Присвоение тегов:
 сделать новый коммиты
-определить sha коммита (выводит последние 5 коммитов): git log --pretty=format:"%h - %an - %ad - %s" --date=format:'%H:%M:%S %d.%m.%y' -n 5
-использовать команду: git tag -a v0.0.6 4ee6d06 -m "сообщение в теге"
+определить sha коммита (выводит последние 3 коммитов): git log --pretty=format:"%h - %an - %ad - %s" --date=format:'%H:%M:%S %d.%m.%y' -n 3
+присвоить тег конкретному коммиту: git tag -a v0.0.6 (название коммита) -m "сообщение в теге"
+посмотреть сразу все коммиты с тегами: git tag -l --format='%(refname:short) | %(taggerdate:short) | %(*objectname:short) | %(contents:subject)'
 
 Запрос конкретного коммита:
 chmod +x get-commit-info.sh
 ./get-commit-info.sh (название коммита)
-будет создан файл (название коммита).tst в папке request_commits
+будет создан файл (название коммита).txt в папке request_commits
