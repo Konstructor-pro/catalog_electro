@@ -2,12 +2,14 @@
 # Конвертируем CSV (если формат UTF-16LE, проверяем кодировку)
 iconv -f UTF-16LE -t UTF-8 components.csv -o components_utf8.csv
 
+# скрипт, который создает файлы каждого компонента из исходного csv
 chmod +x generate_components.sh
 ./generate_components.sh
 
+# скрипт, который создает пустой шаблонный файл компонента для ручного заполнения
 chmod +x generate_components.sh
 ./create_templates.sh
 
+# скрипт, который объединяет файлы компонентов обратно в csv
 chmod +x merge_to_csv.sh
 ./merge_to_csv.sh
-
