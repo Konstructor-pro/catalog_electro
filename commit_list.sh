@@ -8,17 +8,16 @@ CSV_HEADER="Тэг;Дата;Коммит;Сообщение"
 echo "$CSV_HEADER" > "$CSV_FILE"
 
 # Получаем все теги в обратном хронологическом порядке
-git tag -l --format='%(refname:short),%(taggerdate:short),%(*objectname:short),%(contents:subject)' | sort -r | while IFS= read -r line; do
+git tag -l --format='%(refname:short);%(taggerdate:short);%(*objectname:short);%(contents:subject)' | sort -r | while IFS= read -r line; do
     # Пропускаем пустые строки
     if [ -z "$line" ]; then continue; fi
     
-    # Экранируем кавычки в сообщении
-    safe_line=$(echo "$line" | sed 's/"/""/g')
+    # Удаляем все кавычки из строки
+    clean_line=$(echo "$line" | tr -d '"')
     
-    # Добавляем кавычки вокруг каждого поля
-    echo "\"${safe_line//,/\"\,\"\"}\"" >> "$CSV_FILE"
+    # Добавляем строку в CSV
+    echo "$clean_line" >> "$CSV_FILE"
 done
 
 echo "CSV файл полностью пересоздан: $CSV_FILE"
 echo "Добавлено тегов: $(git tag | wc -l)"
-

@@ -18,5 +18,8 @@ chmod +x merge_to_csv.sh
 chmod +x commit_list.sh
 ./commit_list.sh
 
-#добавлен файл хука
-chmod +x .git/hooks/post-tag
+Присвоение тегов:
+сделать новый коммиты
+определить sha коммита
+использовать команду: git tag -a v1.2.5 8e9f0g1 -m "сообщение в теге"
+
