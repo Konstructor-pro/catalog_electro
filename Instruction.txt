@@ -13,3 +13,10 @@ chmod +x generate_components.sh
 # скрипт, который объединяет файлы компонентов обратно в csv
 chmod +x merge_to_csv.sh
 ./merge_to_csv.sh
+
+# скрипт, который записывает все коммиты с тэгам в файл tags_history.csv
+chmod +x commit_list.sh
+./commit_list.sh
+
+#добавлен файл хука
+chmod +x .git/hooks/post-tag
