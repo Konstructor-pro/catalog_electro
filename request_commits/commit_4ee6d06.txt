@@ -1,0 +1,21 @@
+Хеш коммита: 4ee6d06881d2b7831f496e517e293e914a0091c6
+Автор: Konstructor-pro <qqra@mail.ru>
+Дата автора: 20:33:23 20.07.25
+Коммитер: Konstructor-pro <qqra@mail.ru>
+Дата коммитера: 20:33:23 20.07.25
+Сообщение коммита: 
+обновлен скрипт для истории тегов, удален хук
+
+M	Instruction.txt
+M	commit_list.sh
+M	tags_history.csv
+
+Связанные теги:
+v0.0.6
+
+Присутствует в ветках:
+* main
+  remotes/origin/main
+
+Родительские коммиты:
+  48113e8b03296936c5c3b28980dc3f2bcd3b0742
